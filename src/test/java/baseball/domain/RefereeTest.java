@@ -31,33 +31,4 @@ class RefereeTest {
         String actual = referee.compare(answer, player);
         assertThat(actual).isEqualTo(expected);
     }
-
-
-    @Test
-    void 스트라이크3() {
-        List<Integer> player = Arrays.asList(1, 2, 3);
-        String result = referee.compare(answer, player);
-        assertThat(result).isEqualTo("0볼 3스트라이크");
-    }
-
-    @Test
-    void 낫싱() {
-        List<Integer> player = Arrays.asList(7, 8, 9);
-        String result = referee.compare(answer, player);
-        assertThat(result).isEqualTo("낫싱");
-    }
-
-    @Test
-    void 볼3() {
-        List<Integer> player = Arrays.asList(2, 3, 1);
-        String result = referee.compare(answer, player);
-        assertThat(result).isEqualTo("3볼 0스트라이크");
-    }
-
-    @Test
-    void 볼2_스트라이크1() {
-        List<Integer> player = Arrays.asList(1, 3, 2);
-        String result = referee.compare(answer, player);
-        assertThat(result).isEqualTo("2볼 1스트라이크");
-    }
 }
