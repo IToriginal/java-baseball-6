@@ -1,14 +1,14 @@
 package baseball;
 
+import baseball.domain.NumberGenerator;
+import java.util.List;
+
 public class Application {
 
-    /**
-     * // 객체 지향 프로그래밍?
-     *         // Step 1. 기능을 가지고 있는 클래스를 인스턴스화(=객체)한다.
-     *         // Step 2. 필요한 기능을 (역할에 맞는) 각 인스턴스가 수행하게 한다. (의인화)
-     *         // Step 3. 각 결과를 종합한다(= 프로그램을 동작 시킨다).
-     */
     public static void main(String[] args) {
         // TODO: 프로그램 구현
+        NumberGenerator generator = new NumberGenerator();
+        List<Integer> numbers = generator.createRandomNumbers();
+        System.out.println(numbers);
     }
 }
